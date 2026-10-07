@@ -9,13 +9,14 @@ type Book = {
   progress: number
   totalPages: number
   dueDate: string
+  genre: string
 }
 
 const mockBooks: Book[] = [
-  { id: 1, title: 'Чистый код', author: 'Роберт Мартин', progress: 120, totalPages: 464, dueDate: '2026-02-15' },
-  { id: 2, title: 'Атомные привычки', author: 'Джеймс Клир', progress: 80, totalPages: 320, dueDate: '2026-02-28' },
-  { id: 3, title: 'Дюна', author: 'Фрэнк Герберт', progress: 250, totalPages: 688, dueDate: '2026-03-10' },
-  { id: 4, title: 'Гарри Поттер и философский камень', author: 'Дж. К. Роулинг', progress: 432, totalPages: 432, dueDate: '2026-01-30' },
+  { id: 1, title: 'Чистый код', author: 'Роберт Мартин', progress: 120, totalPages: 464, dueDate: '2026-02-15', genre:'Прикладные' },
+  { id: 2, title: 'Атомные привычки', author: 'Джеймс Клир', progress: 80, totalPages: 320, dueDate: '2026-02-28', genre:'Мотивационные'},
+  { id: 3, title: 'Дюна', author: 'Фрэнк Герберт', progress: 250, totalPages: 688, dueDate: '2026-03-10', genre:'Фантастика' },
+  { id: 4, title: 'Гарри Поттер и философский камень', author: 'Дж. К. Роулинг', progress: 432, totalPages: 432, dueDate: '2026-01-30', genre:"Приключения" },
 ]
 
 export default function App() {
@@ -36,6 +37,7 @@ export default function App() {
                 <th>#</th>
                 <th>Название</th>
                 <th>Автор</th>
+                <th>Жанр</th>
                 <th>Прогресс</th>
                 <th>Вернуть до</th>
               </tr>
@@ -49,6 +51,7 @@ export default function App() {
                     <td className="cell-num">{index + 1}</td>
                     <td className="cell-title">{book.title}</td>
                     <td className="cell-author">{book.author}</td>
+                    <td className="cell-genre">{book.genre}</td>
                     <td>
                       <div className="progress">
                         <div className="progress-bar">
