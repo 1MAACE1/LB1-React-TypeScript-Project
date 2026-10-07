@@ -1,6 +1,115 @@
 .app {
- max-width: 960px;
- margin: 0 auto;
- padding: 32px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 32px 24px;
+  font-family: system-ui, -apple-system, sans-serif;
+  color: #1f2937;
+  background: #f9fafb;
+  min-height: 100vh;
 }
-.app section { margin-top: 32px; }
+
+.app-header h1 {
+  margin: 0 0 4px;
+  font-size: 1.8rem;
+}
+
+.app-header p {
+  margin: 0 0 32px;
+  color: #6b7280;
+}
+
+h2 {
+  font-size: 1.25rem;
+  margin: 0 0 16px;
+}
+
+.table-wrapper {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+}
+
+.book-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.book-table thead {
+  background: #f3f4f6;
+}
+
+.book-table th {
+  text-align: left;
+  padding: 14px 16px;
+  font-weight: 600;
+  color: #374151;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.book-table td {
+  padding: 14px 16px;
+  border-top: 1px solid #f0f0f0;
+  vertical-align: middle;
+}
+
+.book-table tbody tr:hover {
+  background: #fafafa;
+}
+
+.cell-num {
+  color: #9ca3af;
+  width: 40px;
+}
+
+.cell-title {
+  font-weight: 600;
+}
+
+.cell-author {
+  color: #6b7280;
+}
+
+.progress {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 160px;
+}
+
+.progress-bar {
+  height: 8px;
+  background: #e5e7eb;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #6366f1, #8b5cf6);
+  border-radius: 999px;
+  transition: width 0.4s ease;
+}
+
+.progress-fill.done {
+  background: linear-gradient(90deg, #10b981, #34d399);
+}
+
+.progress-label {
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+.cell-due {
+  color: #b45309;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.cell-due.done-text {
+  color: #059669;
+  font-weight: 600;
+}
